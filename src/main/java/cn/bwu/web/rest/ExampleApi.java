@@ -34,7 +34,7 @@ public class ExampleApi {
         if (StringUtils.isEmpty(startTime)) {
             startDate = new DateTime(new DateTime().plusDays(-6).toString("yyyy-MM-dd")).toDate();
         } else {
-            startDate = new DateTime(startTime).toDate();
+            startDate = new DateTime(startTime).toDate() ;
         }
         return JsonResult.success(sampleService.selectUserPageable(startDate, page, pageSize));
     }
